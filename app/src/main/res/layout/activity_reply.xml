@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reply">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="답글"
+            android:textSize="20dp">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_mainreply_profileimg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+
+        android:src="@drawable/myprofile"
+        app:civ_border_color="#000000"
+        app:civ_border_overlay="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_mainreply_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="아이디"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_mainreply_profileimg"
+        app:layout_constraintStart_toEndOf="@+id/iv_mainreply_profileimg"
+        app:layout_constraintTop_toTopOf="@+id/iv_mainreply_profileimg" />
+
+    <TextView
+        android:id="@+id/tv_mainreply_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="1일 전"
+        android:textColor="#A8A8A8"
+
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_mainreply_profileimg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_mainreply_profileimg"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/tv_mainreply_ID"
+        app:layout_constraintStart_toEndOf="@+id/tv_mainreply_ID"
+        app:layout_constraintTop_toTopOf="@+id/tv_mainreply_ID"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tv_mainreply_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="댓글 내용" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_mainreply_likenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="좋아요 1개"
+        android:textColor="#A8A8A8"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_mainreply_date"
+        app:layout_constraintStart_toEndOf="@+id/tv_mainreply_date"
+        app:layout_constraintTop_toTopOf="@+id/tv_mainreply_date" />
+
+    <Button
+        android:id="@+id/iv_mainreply_like"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/heart"
+        app:layout_constraintBottom_toBottomOf="@+id/linear_layout"
+        app:layout_constraintStart_toEndOf="@+id/linear_layout"
+        app:layout_constraintTop_toTopOf="@+id/linear_layout" />
+
+
+    <LinearLayout
+        android:id="@+id/reply_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#494949"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/et_reply"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:hint="내용을 입력해주세요." />
+
+        <Button
+            android:id="@+id/btn_reply_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="게시" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/reply_linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mainreply_date"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_reply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/tv_noreply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="대댓글이 없습니다."
+        android:textSize="30dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mainreply_date" />
+</androidx.constraintlayout.widget.ConstraintLayout>

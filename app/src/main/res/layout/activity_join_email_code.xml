@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Join_EmailCode">
+
+    <ImageView
+        android:id="@+id/LOGO4"
+        android:layout_width="221dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002"
+        app:srcCompat="@drawable/logo"
+        tools:srcCompat="@drawable/logo"
+
+        />
+
+    <EditText
+        android:id="@+id/et_Join_CertificationNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="인증코드"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/LOGO4"
+        app:layout_constraintStart_toStartOf="@+id/LOGO4"
+        app:layout_constraintTop_toBottomOf="@+id/LOGO4" />
+
+    <Button
+        android:id="@+id/btn_certification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인증하기"
+        app:layout_constraintEnd_toEndOf="@+id/et_Join_CertificationNumber"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/et_Join_CertificationNumber"
+        app:layout_constraintTop_toBottomOf="@+id/et_Join_CertificationNumber" />
+
+    <TextView
+        android:id="@+id/tv_Email_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/et_Join_CertificationNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_Join_CertificationNumber" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/et_Join_CertificationNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/et_Join_CertificationNumber" />
+
+    <TextView
+        android:id="@+id/tv_SendAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인증코드 재전송"
+        android:textColor="#03A9F4"
+        app:layout_constraintEnd_toEndOf="@+id/tv_Email_check"
+        app:layout_constraintStart_toStartOf="@+id/tv_Email_check"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Email_check" />
+</androidx.constraintlayout.widget.ConstraintLayout>

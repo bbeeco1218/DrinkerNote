@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrivacyPolicy">
+    <ImageView
+        android:id="@+id/LOGO"
+        android:layout_width="221dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191"
+        app:srcCompat="@drawable/logo"
+        tools:srcCompat="@drawable/logo"
+
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox_All"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="전체 동의"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LOGO" />
+
+    <CheckBox
+        android:id="@+id/checkBox_1"
+        android:layout_width="339dp"
+        android:layout_height="80dp"
+        android:text="서비스 이용약관에 동의합니다. *약관 내 광고성정보 수신동의내용이 포함되어 있습니다."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.638"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_All"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox_2"
+        android:layout_width="339dp"
+        android:layout_height="80dp"
+        android:text="개인정보취급방침에 동의합니다."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox_1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_1"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox_3"
+        android:layout_width="339dp"
+        android:layout_height="80dp"
+        android:text="개인정보추가수집에 동의합니다."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox_2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_2"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_SeePolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이용약관 보기"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_1"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox_1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_1" />
+
+    <Button
+        android:id="@+id/btn_joinfin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="가입하기"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox_3"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_3"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

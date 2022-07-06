@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/newNote"
+        app:showAsAction="always"
+        android:icon="@drawable/newnote"
+        android:title="새노트"
+        />
+    <item
+        android:id="@+id/News"
+        android:title="활동"
+
+        android:icon="@drawable/bell"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/message"
+        app:showAsAction="always"
+        android:icon="@drawable/message"
+        android:title="메세지"
+        />
+
+    <group>
+
+        <item
+            android:id="@+id/logout"
+
+            android:title="로그아웃"
+            />
+        <item
+            android:id="@+id/option"
+
+            android:title="설정"
+            />
+    </group>
+</menu>

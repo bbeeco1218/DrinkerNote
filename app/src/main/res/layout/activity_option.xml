@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".option">
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textSize="20dp"
+            android:text="설정"
+            >
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_option_profileimg"
+        android:layout_width="196dp"
+        android:layout_height="202dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/myprofile"
+        app:civ_border_color="#000000"
+        app:civ_border_overlay="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/btn_changeProfileIMG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="프로필 사진 변경"
+        app:layout_constraintEnd_toEndOf="@+id/iv_option_profileimg"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/iv_option_profileimg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_option_profileimg" />
+
+    <Button
+        android:id="@+id/btn_changePW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="비밀번호 변경"
+        app:layout_constraintEnd_toEndOf="@+id/btn_changeProfileIMG"
+        app:layout_constraintStart_toStartOf="@+id/btn_changeProfileIMG"
+        app:layout_constraintTop_toBottomOf="@+id/btn_changeProfileIMG" />
+
+    <Button
+        android:id="@+id/btn_optionAlam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="알림 설정"
+        app:layout_constraintEnd_toEndOf="@+id/btn_changePW"
+        app:layout_constraintStart_toStartOf="@+id/btn_changePW"
+        app:layout_constraintTop_toBottomOf="@+id/btn_changePW" />
+
+    <TextView
+        android:id="@+id/tv_profileID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_option_profileimg"
+        app:layout_constraintStart_toStartOf="@+id/iv_option_profileimg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_option_profileimg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewNote_taste">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="맛 입력"
+            android:textSize="20dp">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="느끼신 맛,향을 입력해주세요."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="BODY"
+        app:layout_constraintBottom_toBottomOf="@+id/RB_BODY"
+        app:layout_constraintEnd_toStartOf="@+id/RB_BODY"
+        app:layout_constraintTop_toTopOf="@+id/RB_BODY" />
+
+    <RatingBar
+        android:id="@+id/RB_BODY"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:isIndicator="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <RatingBar
+        android:id="@+id/RB_SWEET"
+        android:isIndicator="false"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/RB_BODY"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/RB_BODY"
+        app:layout_constraintTop_toBottomOf="@+id/RB_BODY" />
+
+    <RatingBar
+        android:id="@+id/RB_SPICE"
+        android:isIndicator="false"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/RB_SWEET"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/RB_SWEET"
+        app:layout_constraintTop_toBottomOf="@+id/RB_SWEET" />
+
+    <RatingBar
+        android:id="@+id/RB_MALTY"
+        android:isIndicator="false"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/RB_SPICE"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/RB_SPICE"
+        app:layout_constraintTop_toBottomOf="@+id/RB_SPICE" />
+
+    <RatingBar
+        android:id="@+id/RB_FRUIT"
+        android:isIndicator="false"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/RB_MALTY"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/RB_MALTY"
+        app:layout_constraintTop_toBottomOf="@+id/RB_MALTY" />
+
+    <RatingBar
+        android:id="@+id/RB_TANNIC"
+        android:isIndicator="false"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/RB_FRUIT"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/RB_FRUIT"
+        app:layout_constraintTop_toBottomOf="@+id/RB_FRUIT" />
+
+    <RatingBar
+        android:id="@+id/RB_FLORAL"
+        android:isIndicator="false"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/RB_TANNIC"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/RB_TANNIC"
+        app:layout_constraintTop_toBottomOf="@+id/RB_TANNIC" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="SWEET"
+        app:layout_constraintBottom_toBottomOf="@+id/RB_SWEET"
+        app:layout_constraintEnd_toStartOf="@+id/RB_SWEET"
+        app:layout_constraintTop_toTopOf="@+id/RB_SWEET" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="SPICE"
+        app:layout_constraintBottom_toBottomOf="@+id/RB_SPICE"
+        app:layout_constraintEnd_toStartOf="@+id/RB_SPICE"
+        app:layout_constraintTop_toTopOf="@+id/RB_SPICE" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="MALTY"
+        app:layout_constraintBottom_toBottomOf="@+id/RB_MALTY"
+        app:layout_constraintEnd_toStartOf="@+id/RB_MALTY"
+        app:layout_constraintTop_toTopOf="@+id/RB_MALTY" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="FRUIT"
+        app:layout_constraintBottom_toBottomOf="@+id/RB_FRUIT"
+        app:layout_constraintEnd_toStartOf="@+id/RB_FRUIT"
+        app:layout_constraintTop_toTopOf="@+id/RB_FRUIT" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="TANNIC"
+        app:layout_constraintBottom_toBottomOf="@+id/RB_TANNIC"
+        app:layout_constraintEnd_toStartOf="@+id/RB_TANNIC"
+        app:layout_constraintTop_toTopOf="@+id/RB_TANNIC" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="FLORAL"
+        app:layout_constraintBottom_toBottomOf="@+id/RB_FLORAL"
+        app:layout_constraintEnd_toStartOf="@+id/RB_FLORAL"
+        app:layout_constraintTop_toTopOf="@+id/RB_FLORAL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

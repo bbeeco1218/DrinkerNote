@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="10dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_room_profileimg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/myprofile"
+        app:civ_border_color="#000000"
+        app:civ_border_overlay="true"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_room_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="아이디"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_room_profileimg"
+        app:layout_constraintStart_toEndOf="@+id/iv_room_profileimg"
+        app:layout_constraintTop_toTopOf="@+id/iv_room_profileimg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_room_contents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="최근 메세지 내용"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_room_profileimg"
+        app:layout_constraintStart_toEndOf="@+id/iv_room_profileimg"
+        app:layout_constraintTop_toTopOf="@+id/iv_room_profileimg"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_room_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보낸날짜"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_room_profileimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toEndOf="@+id/iv_room_profileimg"
+        app:layout_constraintTop_toTopOf="@+id/iv_room_profileimg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+
+        android:id="@+id/latelymessagenum"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="8dp"
+
+        android:background="@android:drawable/ic_notification_overlay"
+
+        android:text="27"
+
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_room_date"
+        app:layout_constraintStart_toStartOf="@+id/tv_room_date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_room_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
